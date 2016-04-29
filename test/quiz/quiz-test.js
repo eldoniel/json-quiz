@@ -66,6 +66,18 @@ describe('Quiz', function () {
           });
         });
 
+        it('may have a *maxAttempts* property', function () {
+          assert.isValid('max-attempts-step');
+        });
+        
+        describe('The *maxAttempts* property', function () {
+          it('must be a number', function () {
+            assert.hasError('step-maxattempts-is-not-a-number', {
+              '.steps[0].maxAttempts': 'should be number'
+            });
+          });
+        });
+
         it('must have an *items* property', function () {
           assert.hasError('no-step-items', {
             '.steps[0].items': 'property .items is required'

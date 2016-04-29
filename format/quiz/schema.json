@@ -18,6 +18,9 @@
           "id": {
             "type": "string"
           },
+          "maxAttempts": {
+            "type": "number"
+          },
           "items": {
             "type": "array",
             "minItems": 1,
